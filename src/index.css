@@ -1,13 +1,300 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Cabin+Sketch:wght@200;300;400;500;600;700&family=Rubik+Glitch&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth !important;
+  }
+
+  body {
+    background: rgb(172 172 172 / 21%);
+    @apply font-primary;
+  }
+
+  body:has(.no-scroll) {
+    overflow: hidden !important;
+  }
+
+  .water {
+    -webkit-box-reflect: below -40px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  }
+
+  .inner-mod {
+    position: relative;
+  }
+
+  .react-tabs .react-tabs__tab-list {
+    display: flex;
+    gap: 0.4rem;
+    margin: 0.4rem 0 1.7rem 0;
+  }
+
+  .ReactModalPortal .ReactModal__Content.ReactModal__Content--after-open {
+    overflow: hidden !important;
+  }
+  .basic-single {
+    margin: 1rem 0 0.4rem 0;
+    max-height: 7rem;
+  }
+  @media (min-width: 420px) {
+    .basic-single .css-1nmdiq5-menu {
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 4px;
+      box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1),
+        0 4px 11px hsla(0, 0%, 0%, 0.1);
+      margin-bottom: 8px;
+      margin-top: 8px;
+      box-sizing: border-box;
+    }
+  }
+
+  .basic-single .css-13cymwt-control {
+    border-radius: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #1a44ed;
+  }
+
+  .basic-single .css-t3ipsp-control {
+    border-color: #1a44ed !important;
+    border-radius: 0.6rem;
+  }
+
+  .react-tabs .react-tabs__tab-list .react-tabs__tab {
+    color: #1a44ed;
+    background-color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+
+  .react-tabs .react-tabs__tab-list .react-tabs__tab--selected {
+    color: #fff;
+    background-color: #1a44ed;
+    border: none;
+  }
+
+  .react-tabs .react-tabs__tab-list .react-tabs__tab--selected:focus-visible {
+    outline: none;
+  }
+
+  .tableau .MuiPaper-root.MuiPaper-rounded {
+    background-color: #ebebeb3d !important;
+    border-radius: 1rem;
+  }
+
+  .tableau .MuiBox-root.css-1tbggly {
+    background-color: #ebebeb3d !important;
+    z-index: 0;
+  }
+  .tableau .MuiTableContainer-root {
+    background-color: #ebebeb3d !important;
+  }
+  .css-1tbggly {
+    background-color: #ebebeb3d !important;
+  }
+
+  .tableau .MuiTableBody-root .MuiTableRow-root {
+    background-color: #ebebeb3d !important;
+  }
+
+  .tableau .MuiTableHead-root .MuiTableRow-root {
+    background-color: #ebebeb3d !important;
+  }
+
+  .tableau .MuiBox-root.css-10gei56 {
+    background-color: #ebebeb3d !important;
+    z-index: 0;
+  }
+
+  .tableau
+    .MuiPaper-root
+    .MuiTableContainer-root
+    .MuiTableBody-root
+    .MuiTableRow-root
+    .MuiTableCell-body.MuiTableCell-sizeMedium,
+  .tableau
+    .MuiPaper-root
+    .MuiTableContainer-root
+    .MuiTableHead-root
+    .MuiTableRow-root
+    .MuiTableCell-head.MuiTableCell-sizeMedium {
+    width: 80px !important;
+    min-width: 49px !important;
+  }
+
+  @media (max-width: 480px) {
+    .tableau
+      .MuiPaper-root
+      .MuiTableContainer-root
+      .MuiTableBody-root
+      .MuiTableRow-root
+      .MuiTableCell-body.MuiTableCell-sizeMedium,
+    .tableau
+      .MuiPaper-root
+      .MuiTableContainer-root
+      .MuiTableHead-root
+      .MuiTableRow-root
+      .MuiTableCell-head.MuiTableCell-sizeMedium {
+      padding: 0.4rem 0.5rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  .flex-container {
+    max-width: 240px;
+    margin: 0 auto 1rem auto;
+  }
+  .flex-container .react-multiple-carousel__arrow {
+    box-shadow: 7px 1.27273px 8.1818px #0063d7;
+    background: #1a44ed;
+  }
+  .flex-container .react-multiple-carousel__arrow:hover {
+    box-shadow: 7px 1.27273px 8.1818px #1a44ed;
+    background: #0063d7 !important;
+  }
+  .flex-container .react-multiple-carousel__arrow--left {
+    margin-left: -0.5rem !important;
+  }
+  .flex-container .react-multiple-carousel__arrow--right {
+    right: 1rem !important;
+  }
+  .flex-container .react-multi-carousel-item {
+    width: auto;
+  }
+  .flex-container .react-multi-carousel-item p {
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+  }
+  .flex-container .react-multi-carousel-track {
+    gap: 0rem;
+    height: 2.8rem;
+  }
+  .flex-container .react-multi-carousel-item--active {
+    text-align: center;
+    color: #1a44ed;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .glassy {
+    background: rgba(23, 156, 208, 0.295);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .classy {
+    width: 200px; /* Adjust the width as needed */
+    height: 50px;
+  }
+
+  .classy::after {
+    content: "";
+    position: absolute;
+    top: 2px; /* Adjust the border width */
+    right: 2px; /* Adjust the border width */
+    bottom: 2px; /* Adjust the border width */
+    left: 2px; /* Adjust the border width */
+    z-index: -1;
+    background: linear-gradient(to top, #24c1ff, #1a44ed);
+    border-radius: 17px; /* Adjust the value as needed for the desired curvature */
+  }
+  .boarded-glass {
+    background: rgba(100, 210, 230, 0.48);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(100, 210, 230, 1);
+  }
+  .progress div div {
+    background: linear-gradient(
+      70deg,
+      rgba(245, 62, 6, 0.87),
+      rgba(228, 113, 6, 0.849)
+    ) !important;
+  }
+
+  .progress div div span {
+    position: absolute;
+    background: linear-gradient(
+      -170deg,
+      rgba(245, 62, 6, 0.87),
+      rgba(228, 58, 6, 0.849)
+    );
+    padding: 0.9rem 0.7rem !important;
+    border-radius: 50%;
+    font-size: 0.7rem !important;
+    border: 1px dashed white;
+  }
+
+  h1 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-[44px] font-bold leading-[47px] 640:text-[47px] 640:leading-[52px] 1180:text-[55px] 1180:leading-[58px];
+  }
+
+  h4 {
+    @apply text-[32px] font-bold leading-[38px] 640:text-[41px] 640:leading-[45px];
+  }
+
+  .white-text {
+    @apply text-sm leading-6 text-white text-opacity-70;
+  }
+
+  p {
+    @apply text-base font-light leading-[26px] text-neutral-600;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .container {
+    @apply relative mx-auto max-w-[800px] min-w-[360px] px-4;
+  }
+
+  .light-button {
+    @apply smooth h-10 rounded-xl bg-neutral-100 px-4 flex items-center text-center text-black font-semibold transition-colors;
+  }
+
+  .dark-button {
+    @apply smooth h-10 rounded-xl flex items-center bg-blackhue-100 px-4 text-center text-white font-semibold transition-colors;
+  }
+}
+
+@layer utilities {
+  .x-center {
+    @apply flex justify-center align-middle;
+  }
+
+  .x-between {
+    @apply flex justify-between align-middle;
+  }
+
+  .y-center {
+    @apply x-center flex-col;
+  }
+
+  .y-between {
+    @apply flex flex-col justify-between align-middle;
+  }
+
+  .smooth {
+    @apply duration-300 ease-linear;
+  }
+}
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading="lazy"] {
+    clip-path: inset(0.6px);
+  }
 }
